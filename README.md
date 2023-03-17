@@ -20,6 +20,9 @@ After registration, the user must set the specific parameters:
 - account_sid, auth_token and virtual number received from twilio.
 - The number of the recipient of the SMS, which was previously verified on twilio.
 
+You can run this code in the cloud, defined for that daily task, and enjoy your reminder.
+
+
 ## How to run
 run following:
 ```bash
