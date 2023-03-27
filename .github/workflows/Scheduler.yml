@@ -9,13 +9,13 @@ jobs:
     name: Pick_up_the_Umbrella_Reminder
     runs-on: ubuntu-latest
     env:
-      ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
-      API_KEY: ${{ secrets.API_KEY }}
-      AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-      MY_LAT: ${{ secrets.MY_LAT }}
-      MY_LONG: ${{ secrets.MY_LONG }}
-      RECEIVER: ${{ secrets.RECEIVER }}
-      SENDER: ${{ secrets.SENDER }}
+      ACCOUNT_SID: ${{ vars.ACCOUNT_SID }}
+      API_KEY: ${{ vars.API_KEY }}
+      AUTH_TOKEN: ${{ vars.AUTH_TOKEN }}
+      MY_LAT: ${{ vars.MY_LAT }}
+      MY_LONG: ${{ vars.MY_LONG }}
+      RECEIVER: ${{ vars.RECEIVER }}
+      SENDER: ${{ vars.SENDER }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
