@@ -2,7 +2,7 @@ name: Run scheduled action
 on:
   schedule:
     # You need to set your schedule here
-    - cron: "48 21 * * *"
+    - cron: "00 05 * * *"
 
 jobs:
   create_issue:
