@@ -6,7 +6,7 @@ on:
 
 jobs:
   create_issue:
-    name: Send Birthday wish
+    name: Pick_up_the_Umbrella_Reminder
     runs-on: ubuntu-latest
     env:
       ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
