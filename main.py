@@ -39,6 +39,16 @@ receiver = "RECEIVER"
 
 # ---------------------------------------- Weather API call ----------------------------------------
 
+user_agents = [
+  "Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0",
+  "Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0",
+  "Mozilla/5.0 (X11; Linux x86_64; rv:95.0) Gecko/20100101 Firefox/95.0"
+  ]
+random_user_agent = random.choice(user_agents)
+headers = {
+    'User-Agent': random_user_agent
+}
+
 parameters = {
     "lat": os.getenv(my_lat),
     "lon": os.getenv(my_long),
@@ -46,7 +56,7 @@ parameters = {
     "exclude": "current,hourly,daily"
 }
 
-weather_data = requests.get("https://api.openweathermap.org/data/2.5/weather", params=parameters)
+weather_data = requests.get("https://api.openweathermap.org/data/2.5/weather", headers=headers, params=parameters)
 
 # ---------------------------------------- Checking for Errors in api calls ----------------------------------------
 
