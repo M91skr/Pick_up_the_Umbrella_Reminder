@@ -26,6 +26,7 @@ After registration, the user must set the specific parameters:
 import os
 import requests
 from twilio.rest import Client
+from random import random
 
 # ---------------------------------------- Specific Parameters Definition ----------------------------------------
 
